@@ -1,0 +1,44 @@
+
+
+    :root {
+      --accent: #0c29eb;
+    }
+
+    body {
+      font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, "Helvetica Neue", Arial;
+    }
+
+    .typewriter {
+      display: inline-block;
+      border-right: 3px solid rgba(0,0,0,0.7);
+      padding-right: 6px;
+      margin-left: 6px;
+      animation: caret 0.8s steps(1) infinite;
+    }
+
+    @keyframes caret {
+      50% { border-color: transparent; }
+    }
+
+    .fade-up {
+      transform: translateY(18px);
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards;
+    }
+
+    .fade-up.delay-1 { animation-delay: 0.12s; }
+    .fade-up.delay-2 { animation-delay: 0.28s; }
+
+    @keyframes fadeUp {
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .photo-glow {
+      box-shadow: 0 20px 50px rgba(16,24,40,0.15), 0 6px 18px rgba(0,0,0,0.08);
+      border: 6px solid rgba(255,255,255,0.95);
+    }
+
+    .role {
+      min-width: 220px;
+      display: inline-block;
+    }

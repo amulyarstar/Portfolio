@@ -1,50 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Amulya R — Portfolio</title>
 
-  <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./dist/output.css">
+  <link rel="stylesheet" href="./src/custom.css">
+</head>
+  
 
-  <!-- Google font -->
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
-      --accent: #0c29eb; 
-    }
+ 
+  
 
-    body { font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, "Helvetica Neue", Arial; }
-
-    .typewriter {
-      display:inline-block;
-      border-right: 3px solid rgba(0,0,0,0.7);
-      padding-right: 6px;
-      margin-left: 6px;
-      animation: caret 0.8s steps(1) infinite;
-    }
-    @keyframes caret { 50% { border-color: transparent; } }
-
-    /* subtle fade up */
-    .fade-up { transform: translateY(18px); opacity: 0; animation: fadeUp 0.8s ease forwards; }
-    .fade-up.delay-1 { animation-delay: 0.12s; }
-    .fade-up.delay-2 { animation-delay: 0.28s; }
-    @keyframes fadeUp { to { transform: translateY(0); opacity: 1; } }
-
-    /* soft image glow */
-    .photo-glow {
-      box-shadow: 0 20px 50px rgba(16,24,40,0.15), 0 6px 18px rgba(0,0,0,0.08);
-      border: 6px solid rgba(255,255,255,0.95);
-    }
-
-
-    .role { min-width: 220px; display:inline-block; }
-  </style>
+  <!-- YOUR Custom CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-white text-slate-800 antialiased">
+<body class="bg-white text-slate-800 antialiased" style="font-family: Poppins, sans-serif">
+
   <!-- NAV -->
   <header class="fixed inset-x-0 top-0 z-50 bg-white/80 backdrop-blur-sm">
     <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -54,200 +32,155 @@
         <a class="hover:text-slate-900" href="#projects">Projects</a>
         <a class="hover:text-slate-900" href="#contact">Contact</a>
       </nav>
-      <div class="md:hidden"></div>
     </div>
   </header>
 
-  
   <main class="pt-24">
+
+    <!-- HERO -->
     <section class="max-w-6xl mx-auto px-6 py-20">
       <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-        
-        <div class="md:col-span-7">
-          <p class="text-sm text-slate-500 mb-4 fade-up delay-1">Hello, my name is 👋</p>
 
-          <h1 class="text-5xl sm:text-6xl font-extrabold tracking-tight leading-tight text-slate-900 fade-up">
+        <div class="md:col-span-7">
+          <p class="text-sm text-slate-500 mb-4">Hello, my name is 👋</p>
+
+          <h1 class="text-5xl sm:text-6xl font-extrabold tracking-tight leading-tight text-slate-900">
             Amulya R
           </h1>
 
-          <div class="mt-4 text-2xl text-slate-700 flex items-center gap-2 fade-up delay-2">
-            <span class="text-slate-700">I build</span>
-            <div class="role text-slate-900 font-semibold">
-              <span id="roleText">Modern Web Interfaces</span>
-              <span class="typewriter" aria-hidden="true"></span>
-            </div>
+          <div class="mt-4 text-2xl text-slate-700 flex items-center gap-2">
+            <span class="text-pink-600 font-semibold">Learning & Building Web Projects</span>
           </div>
 
-          <p class="mt-6 text-lg text-slate-600 max-w-xl fade-up delay-2">
-            I’m a front-end developer focused on building elegant user experiences — clean UI, smooth interactions,
-            and accessible code. I enjoy turning ideas into polished, production-ready web pages.
+          <p class="mt-6 text-lg text-slate-600 max-w-xl">
+           I am a Computer Science Engineering student who is open to learning and exploring different areas of technology. I am currently building a strong foundation in programming and web technologies while continuously improving my skills.
           </p>
 
-          <div class="mt-8 flex flex-wrap gap-4 fade-up delay-2">
-            <a href="#projects" class="inline-flex items-center gap-2 bg-pink-600 hover:bg-pink-700 text-white px-6 py-3 rounded-full shadow">
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="#projects"
+              class="inline-flex items-center gap-2 bg-pink-600 hover:bg-pink-700 text-white px-6 py-3 rounded-full shadow">
               View Work
             </a>
-            <a href="resume.pdf" class="inline-flex items-center gap-2 border border-pink-600 text-pink-600 px-6 py-3 rounded-full hover:bg-pink-50" target="_blank" class="hover:text-pink-400">Resume</a>>
+
+            <a href="RESUME.pdf" target="_blank"
+              class="inline-flex items-center gap-2 border border-pink-600 text-pink-600 px-6 py-3 rounded-full hover:bg-pink-50">
               Download Resume
             </a>
           </div>
         </div>
 
+        <!-- PHOTO -->
         <div class="md:col-span-5 flex justify-center md:justify-end">
-          <div class="w-64 h-64 rounded-full photo-glow overflow-hidden bg-white/60 flex items-center justify-center">
-            
-            <img src="image.png" alt="Amulya" class="w-full h-full object-cover rounded-full">
+          <div class="w-64 h-64 rounded-full overflow-hidden shadow-lg">
+            <img src="me.jpg" alt="Amulya" class="w-full h-full object-cover">
           </div>
         </div>
+
       </div>
     </section>
 
-  
+    <!-- ABOUT -->
     <section id="about" class="max-w-4xl mx-auto px-6 py-14">
       <h2 class="text-2xl font-bold mb-4">About</h2>
       <p class="text-slate-600 leading-relaxed">
-       I’m a passionate learner focused on creating responsive and accessible front-end interfaces. I enjoy building user-centered designs using modern tools like Tailwind CSS and JavaScript, while continuously improving my skills.
+        I’m a passionate learner focused on creating responsive and accessible front-end interfaces. I enjoy building
+        user-centered designs using modern tools like Tailwind CSS and JavaScript, while continuously improving my
+        skills.
       </p>
     </section>
 
+    <!-- SKILLS -->
+    <section id="skills" class="max-w-6xl mx-auto px-6 py-14">
+      <h2 class="text-2xl font-bold mb-6 text-pink-600">Skills</h2>
 
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6 text-slate-700">
+
+        <div class="bg-white rounded-xl shadow-sm p-4 hover:shadow-md transition">
+  <h3 class="font-semibold text-lg mb-2">HTML & CSS</h3>
+  <p class="text-sm text-slate-600">
+    Basics of web structure, styling, and responsive design.
+  </p>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm p-4 hover:shadow-md transition">
+  <h3 class="font-semibold text-lg mb-2">Java</h3>
+  <p class="text-sm text-slate-600">
+    Fundamental data structures and algorithms using Java, including arrays, strings, stacks, queues, and basic problem solving.
+  </p>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm p-4 hover:shadow-md transition">
+  <h3 class="font-semibold text-lg mb-2">Python</h3>
+  <p class="text-sm text-slate-600">
+    Core programming concepts and problem solving.
+  </p>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm p-4 hover:shadow-md transition">
+  <h3 class="font-semibold text-lg mb-2">Tailwind CSS</h3>
+  <p class="text-sm text-slate-600">
+    Utility-based styling for clean and maintainable UI.
+  </p>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm p-4 hover:shadow-md transition">
+  <h3 class="font-semibold text-lg mb-2">Git & GitHub</h3>
+  <p class="text-sm text-slate-600">
+    Version control basics and collaborative workflows.
+  </p>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm p-4 hover:shadow-md transition">
+  <h3 class="font-semibold text-lg mb-2">Figma</h3>
+  <p class="text-sm text-slate-600">
+    Basic design understanding for planning interfaces.
+  </p>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm p-4 hover:shadow-md transition">
+  <h3 class="font-semibold text-lg mb-2">Team Collaboration</h3>
+  <p class="text-sm text-slate-600">
+    Communication, teamwork, and learning in group projects.
+  </p>
+</div>
+
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
     <section id="projects" class="bg-slate-50 py-16">
       <div class="max-w-6xl mx-auto px-6">
         <h2 class="text-2xl font-bold mb-8">Featured Projects</h2>
+
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        
+
           <article class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition">
             <h3 class="font-semibold text-lg mb-2">Portfolio Website</h3>
-            <p class="text-slate-600 text-sm mb-4">A modern responsive portfolio built with Tailwind and vanilla JS.</p>
-            <a class="text-pink-600 font-medium" href="#">See details →</a>
+            <p class="text-slate-600 text-sm mb-4">A modern responsive portfolio built with Tailwind.</p>
+            <a class="text-pink-600 font-medium" href="#">
+              See Details →
+            </a>
           </article>
 
-     
-    
-        
         </div>
-      </div>
+      
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="bg-gray-900 text-gray-200 py-16 px-6">
-  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
-    
-    <!-- Left Side - Message Form -->
-    <div>
-      <h2 class="text-3xl font-bold text-pink-500 mb-4">Get In Touch</h2>
-      <p class="text-gray-400 mb-8">
-        Let's connect! Reach out for collaborations, projects.
+       <!-- CONTACT -->
+    <section id="contact" class="max-w-4xl mx-auto px-6 py-16">
+      <h2 class="text-2xl font-bold mb-6 text-pink-600">Contact</h2>
+
+      <p class="text-slate-600 mb-4">
+        Open to learning opportunities, internships, and collaborations.
       </p>
 
-      <form class="space-y-5" action="contact">
-        <div>
-          <label class="block text-sm text-gray-300 mb-2">Name</label>
-          <input type="text" placeholder="Your Name" class="w-full p-3 rounded-md bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-pink-500"/>
-        </div>
-        <div>
-          <label class="block text-sm text-gray-300 mb-2">Email</label>
-          <input type="email" placeholder="Your Email" class="w-full p-3 rounded-md bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-pink-500"/>
-        </div>
-        <div>
-          <label class="block text-sm text-gray-300 mb-2">Subject</label>
-          <input type="text" placeholder="Subject" class="w-full p-3 rounded-md bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-pink-500"/>
-        </div>
-        <div>
-          <label class="block text-sm text-gray-300 mb-2">Message</label>
-          <textarea rows="4" placeholder="Your Message" class="w-full p-3 rounded-md bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-pink-500"></textarea>
-        </div>
-        <button class="bg-pink-600 hover:bg-pink-700 px-6 py-3 rounded-lg text-white font-semibold transition">
-          Send Message
-        </button>
-      </form>
-    </div>
+      <p>📧 Email: <a href="mailto:yourmail@gmail.com" class="text-pink-600">amulyar122006@gmail.cpm</a></p>
+      <p>💼 LinkedIn: <a href="#" class="text-pink-600">https://linkedin.com/in/amulya-r-962602324</a></p>
+      <p>💻 GitHub: <a href="#" class="text-pink-600">https://github.com/amulyarstar</a></p>
+    </section>
+</div>
+  </main>
 
-    <!-- Right Side - Contact Details -->
-    <div>
-      <h3 class="text-2xl font-bold text-pink-500 mb-4">Contact Details</h3>
-      <ul class="space-y-4 text-gray-300">
-        <li><strong>Email:</strong> <a href="mailto:amulyar122006@gmail.com" class="hover:text-pink-400">amulyar122006@gmail.com</a></li>
-        <li><strong>Phone:</strong> <a href="tel:+91 901907015" class="hover:text-pink-400">+91 901-907-0156</a></li>
-        <li><strong>Location:</strong> Bengaluru, India</li>
-      </ul>
-
-      <div class="mt-8">
-        <h4 class="text-xl font-semibold text-pink-500 mb-2">Connect With Me</h4>
-        <div class="flex space-x-4 text-2xl">
-          <a href="https://linkedin.com/in/amulya-r-962602324" class="hover:text-pink-400"><i class="fab fa-linkedin"></i></a>
-          <a href="https://github.com/amulyarstar" class="hover:text-pink-400"><i class="fab fa-github"></i></a>
-          <a href="https://x.com/amulya_r7472" class="hover:text-pink-400"><i class="fab fa-twitter"></i></a>
-        </div>
-      </div>
-
-      <div class="mt-8">
-        <h4 class="text-xl font-semibold text-pink-500 mb-2">Availability</h4>
-        <p class="text-gray-400">I'm currently available for freelance work and full-time positions. If you need help with a project, feel free to reach out!</p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-  <footer class="border-t border-slate-100 mt-16 py-8">
-    <div class="max-w-6xl mx-auto px-6 text-sm text-slate-500">&copy; <span id="year"></span> Amulya R </div>
-    <!-- Quick Links Section -->
-<section id="quick-links" class="bg-gray-100 text-gray-800 py-12">
-  <div class="max-w-6xl mx-auto px-6 text-center">
-    <h2 class="text-2xl font-bold mb-6 text-pink-600">Quick Links</h2>
-    <div class="flex flex-wrap justify-center gap-6 text-lg font-medium">
-      <a href="#home" class="hover:text-pink-600 transition">Home</a>
-      <a href="#about" class="hover:text-pink-600 transition">About</a>
-      <a href="#experience" class="hover:text-pink-600 transition">Experience</a>
-      <a href="#skills" class="hover:text-pink-600 transition">Skills</a>
-      <a href="#projects" class="hover:text-pink-600 transition">Projects</a>
-      <a href="#blog" class="hover:text-pink-600 transition">Blog</a>
-      <a href="#contact" class="hover:text-pink-600 transition">Contact</a>
-      <a href="RESUME.pdf" target="_blank" class="hover:text-pink-600 transition">Resume</a>
-    </div>
-  </div>
-</section>
-
-  </footer>
-
-  <script>
-    
-    const roles = ['Modern Web Interfaces', 'Frontend Enthusiast', 'UI & Interaction Designer'];
-    let i = 0, j = 0;
-    const roleEl = document.getElementById('roleText');
-
-    function typeRole() {
-      const current = roles[i];
-      roleEl.textContent = current.slice(0, j + 1);
-      j++;
-      if (j >= current.length) {
-        // pause then delete
-        setTimeout(() => {
-          deleteRole();
-        }, 1000);
-      } else {
-        setTimeout(typeRole, 70);
-      }
-    }
-    function deleteRole() {
-      const current = roles[i];
-      roleEl.textContent = current.slice(0, j - 1);
-      j--;
-      if (j <= 0) {
-        i = (i + 1) % roles.length;
-        setTimeout(typeRole, 200);
-      } else {
-        setTimeout(deleteRole, 40);
-      }
-    }
-    // start
-    setTimeout(typeRole, 400);
-
-    // set year
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
 
